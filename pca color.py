@@ -35,18 +35,15 @@ blue_inverted = pca.inverse_transform(blue_transformed)
 
 img_compressed = (np.dstack((blue_inverted, green_inverted, red_inverted))).astype(np.uint8)
 
-#viewing the compressed image
+
 plt.imshow(img_compressed)
-# img_compressed.shape
 
-
-
-PC_values = np.arange(pca.n_components_) + 1
-plt.plot(PC_values, pca.explained_variance_ratio_, 'o-', linewidth=2, color='blue')
-plt.title('Scree Plot')
-plt.xlabel('Principal Component')
-plt.ylabel('Variance Explained')
-plt.show()
+# PC_values = np.arange(pca.n_components_) + 1
+# plt.plot(PC_values, pca.explained_variance_ratio_, 'o-', linewidth=2, color='blue')
+# plt.title('Scree Plot')
+# plt.xlabel('Principal Component')
+# plt.ylabel('Variance Explained')
+# plt.show()
 
 
 
